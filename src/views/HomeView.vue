@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HeaderComponent header-title="Добро пожаловать"/>
+  <div class="container">
+    <div class="mt-4 d-flex justify-content-center">
+      <button
+          type="button"
+          class="btn btn-success text-white text-uppercase"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+        выбрать дату
+      </button>
+    </div>
   </div>
+  <ModalComponent />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ModalComponent from '@/components/ModalComponent'
+import HeaderComponent from '@/components/base/HeaderComponent'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    ModalComponent,
+    HeaderComponent
   }
 }
 </script>
